@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %} Favorite Dinosaurs! {% endblock %}
+{% block content %}      
+    <h1> Top 10 Favorite Dinos! </h1>
+    <table>
+        <tr>
+            <td>Rank</td>
+            <td>Name</td>
+            <td>Votes</td>
+        </tr>
+    {% for dino in dinos %}
+    
+        <tr>
+            <td>{{dino}}</td>
+            <td>{{dinos[dino]['name']}}</td>
+            <td>{{dinos[dino]['votes']}}</td>
+        </tr>
+    {% endfor %}
+    </table>
+{% endblock %}
