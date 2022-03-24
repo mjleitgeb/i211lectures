@@ -44,7 +44,7 @@ def index(dino=None):
 
 
 
-with open('top10.csv', 'r') as csvfile:
+with open(TOP_10, 'r') as csvfile:
     data = csv.DictReader(csvfile)
     dinos = {row['rank']:{'name':row['name'], 'votes':row['votes']} for row in data}
     
