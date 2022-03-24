@@ -3,6 +3,7 @@ import csv
 app = Flask(__name__)
 
 DINO_PATH = app.root_path + '/dinosaurs.csv'
+TOP_10 = app.root_path + '/top10.csv'
 DINO_KEYS = ['slug', 'name', 'description', 'image', 'image-credit', 'source-url', 'source-credit']
 
 with open(DINO_PATH, 'r') as csvfile:
@@ -43,9 +44,9 @@ def index(dino=None):
 
 
 
-# with open('top10.csv', 'r') as csvfile:
-#     data = csv.DictReader(csvfile)
-#     dinos = {row['rank']:{'name':row['name'], 'votes':row['votes']} for row in data}
+with open('top10.csv', 'r') as csvfile:
+    data = csv.DictReader(csvfile)
+    dinos = {row['rank']:{'name':row['name'], 'votes':row['votes']} for row in data}
     
 @app.route('/favorite')
 def favorite():
@@ -92,7 +93,7 @@ def dino_quiz():
         quizAnswers = {
             'q1' : 'North America',
             'q2' : 'true',
-            'q3' : ['Stegosaurus', 'Triceratops'],
+            'q3' : ['stego', 'tri'],
             'q4' : '66'
        }
            
