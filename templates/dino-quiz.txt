@@ -1,0 +1,22 @@
+Q1: Dropdown
+<legend>Dinosaur fossils have been found on all seven continents. On which continent have the most dinosaur fossils been found?</legend>
+CHOICES: Africa, Antarctica, Asia, Australia, Europe, North America, South America
+A: North America
+
+Q2: Checkbox
+Which of these dinosaurs are herbivores?
+CHOICES:
+Triceratops
+Allosaurus
+Stegosaurus
+Velociraptor
+A: Triceratops, Stegosaurus
+
+Q3: Radio button
+All dinosaurs hatch from eggs. True or false?
+A: True
+
+Q4: Text input
+<legend>Dinosaurs went extinct:</legend>
+<input> million years ago
+A: 66

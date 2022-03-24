@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% block title %} Dino-Site! {% endblock %}   
+{% block content %}
+
+<h1>Add a Dinosaur!</h1>
+
+<form method="POST" name="add_dino">
+
+<div>
+    <input type="text" id="slug" name="slug">
+    <label for="slug">Slug</label>
+</div>    
+
+<div>
+    <input type="text" id="name" name="name">
+    <label for="name">Name</label>
+</div>
+
+<div>
+    <textarea type="text" id="description" name="description">
+    </textarea>
+    <label for="description">Description</label>
+</div>
+
+<div>
+    <input type="text" id="image" name="image">
+    <label for="image">Image</label>
+</div>
+
+<div>
+    <input type="text" id="image-credit" name="image-credit">
+    <label for="image-credit">Image Credit</label>
+</div>
+
+<div>
+    <input type="text" id="source-url" name="source-url">
+    <label for="source-url">Source URL</label>
+</div>
+
+<div>
+    <input type="text" id="source-credit" name="source-credit">
+    <label for="source-credit">Source Credit</label>
+</div>
+
+
+
+<button type="submit" value="Submit">Submit</button>
+<button type="reset" value="Reset">Reset</button>
+</form>
+
+{% endblock %}
